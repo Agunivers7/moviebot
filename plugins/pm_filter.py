@@ -338,7 +338,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
         elif int(user) != 0 and query.from_user.id != int(user):
             return await query.answer(
-                "Nice Try 👍 But, This Was Not Your Request, Please Search Yourself In Group😊",
+                "𝘕𝘪𝘤𝘦 𝘛𝘳𝘺 𝘉𝘶𝘵, 𝘛𝘩𝘪𝘴 𝘞𝘢𝘴 𝘕𝘰𝘵 𝘠𝘰𝘶𝘳 𝘙𝘦𝘲𝘶𝘦𝘴𝘵, 𝘗𝘭𝘦𝘢𝘴𝘦 𝘚𝘦𝘢𝘳𝘤𝘩 𝘠𝘰𝘶𝘳𝘴𝘦𝘭𝘧 𝘐𝘯 𝘎𝘳𝘰𝘶𝘱 𝘣𝘺 𝘈𝘨𝘶𝘯𝘪𝘷𝘦𝘳𝘴𝘢𝘭 𝘨𝘳𝘰𝘶𝘱𝘻",
                 show_alert=True)
 
         if not files_:
