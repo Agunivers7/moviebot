@@ -22,7 +22,7 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [[
-            InlineKeyboardButton('CHENNEL', url='https://t.me/Aguniversmovie'),
+            InlineKeyboardButton('CHANNEL', url='https://t.me/Aguniversmovie'),
             InlineKeyboardButton('GROUP', url='https://t.me/Agunivers_backup'), 
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -38,7 +38,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('CHENNEL', url='https://t.me/Aguniversmovie'),
+            InlineKeyboardButton('CHANNEL', url='https://t.me/Aguniversmovie'),
             InlineKeyboardButton('GROUP', url='https://t.me/Agunivers_backup'), 
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -57,7 +57,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    " Join Updates Channel", url=invite_link.invite_link
                 )
             ]
         ]
