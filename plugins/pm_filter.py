@@ -319,7 +319,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 "Your connected group details ;\n\n",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
-    elif "alertmessage" in query.data:
+       elif "alertmessage" in query.data:
         grp_id = query.message.chat.id
         i = query.data.split(":")[1]
         keyword = query.data.split(":")[2]
@@ -332,6 +332,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data.startswith("file"):
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
+        user = query.message.reply_to_message.from_user.id
+        ad_user = query.from_user.id
+        if int(ad_user) in ADMINS:
+            pass
+        elif int(user) != 0 and query.from_user.id != int(user):
+            return await query.answer(
+                "𝘕𝘪𝘤𝘦 𝘛𝘳𝘺 𝘉𝘶𝘵, 𝘛𝘩𝘪𝘴 𝘞𝘢𝘴 𝘕𝘰𝘵 𝘠𝘰𝘶𝘳 𝘙𝘦𝘲𝘶𝘦𝘴𝘵, 𝘗𝘭𝘦𝘢𝘴𝘦 𝘚𝘦𝘢𝘳𝘤𝘩 𝘠𝘰𝘶𝘳𝘴𝘦𝘭𝘧 𝘐𝘯 𝘎𝘳𝘰𝘶𝘱 𝘣𝘺 𝘈𝘨𝘶𝘯𝘪𝘷𝘦𝘳𝘴𝘢𝘭 𝘨𝘳𝘰𝘶𝘱𝘻",
+                show_alert=True)
+
         if not files_:
             return await query.answer('No such file exist.')
         files = files_[0]
@@ -344,7 +353,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
                                                        file_size='' if size is None else size,
                                                        file_caption='' if f_caption is None else f_caption)
-            except Exception as e:
+ 
+       except Exception as e:
                 logger.exception(e)
             f_caption = f_caption
         if f_caption is None:
