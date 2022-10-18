@@ -2,7 +2,8 @@ class script(object):
     START_TXT = """
 Hi,{}</a>, 
 
- I'm Only Work For <a href='https://t.me/Aguniversmovie'>𝘈𝘨𝘶𝘯𝘪𝘷𝘦𝘳𝘴𝘮𝘰𝘷𝘪𝘦</a>
+ 
+I'm Only Work For <a href='https://t.me/Aguniversmovie'>𝘈𝘨𝘶𝘯𝘪𝘷𝘦𝘳𝘴𝘮𝘰𝘷𝘪𝘦</a>
 
 ➠ Join Our Group For More Movies & Series Working 24/7"""
     HELP_TXT = """𝙷𝙴𝚈 {}
